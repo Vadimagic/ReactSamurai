@@ -6,11 +6,13 @@ import './App.css'
 
 function App() {
 	return (
-		<div className="wrapper">
+		<>
 			<Header />
-			<Navbar />
-			<Content />
-		</div>
+			<div className="wrapper">
+				<Navbar />
+				<Content />
+			</div>
+		</>
 	);
 }
 

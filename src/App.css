@@ -1,8 +1,9 @@
 .wrapper {
+	width: 990px;
+	padding: 0 15px;
+	margin: 15px auto 0 auto;
 	display: grid;
 	grid-template-areas: 
-	"header header" 
 	"navbar content";
-	grid-template-rows: 50px 1fr;
 	grid-template-columns: 2fr 10fr;
 }

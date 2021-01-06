@@ -1,7 +1,19 @@
 .header {
+	height: 48px;
 	grid-area: header;
+	background: #fff;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.116);
+}
+
+.header__content {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	width: 990px;
+	padding: 0 15px;
+	margin: 0 auto;
 }
 
 .header__image {
-	width: 20px;
+	height: 30px;
 }
