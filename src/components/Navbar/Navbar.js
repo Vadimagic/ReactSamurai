@@ -1,5 +1,7 @@
+import './Navbar.css'
+
 const Navbar = () => (
-	<nav>
+	<nav className="navbar">
 		<ul>
 			<li>Profile</li>
 			<li>Messages</li>
