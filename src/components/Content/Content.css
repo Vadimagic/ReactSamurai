@@ -29,6 +29,7 @@
 	border-radius: 5px;
 	cursor: pointer;
 }
+
 .content__submit-post:hover {
 	background: rgb(145, 92, 206);
 }
