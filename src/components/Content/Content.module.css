@@ -2,7 +2,7 @@
 	grid-area: content;
 }
 
-.content__block {
+.block {
 	background: #fff;
 	border-radius: 8px;
 	padding: 20px;
@@ -11,17 +11,17 @@
 	margin-bottom: 20px;
 }
 
-.content__img {
+.img_profile {
 	width: 100%;
 }
 
-.content__add-post {
+.add_post {
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-end;
 }
 
-.content__submit-post {
+.submit_post {
 	padding: 7px 5px;
 	background: rgb(134, 75, 202);
 	color: #fff;
@@ -30,22 +30,22 @@
 	cursor: pointer;
 }
 
-.content__submit-post:hover {
+.submit_post:hover {
 	background: rgb(145, 92, 206);
 }
 
-.content__add-text {
+.add_text {
 	border: 2px solid rgb(194, 192, 192);
 }
 
-.content__post-author {
+.post_author {
 	position: relative;
 	overflow:hidden;
 	width:70px;
 	height:70px;
 }
 
-.content__post-avatar {
+.post_avatar {
 	position: absolute;
 	top:50%;
 	left:50%;
