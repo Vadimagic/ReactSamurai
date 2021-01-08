@@ -11,7 +11,9 @@ const Content = () => (
 		</div>
 		<div className="content__posts">
 			<form className="content__add-post content__block">
-				<textarea></textarea>
+				<div className="form-block">
+				<textarea className="content__add-text"></textarea>
+				</div>
 				<button className="content__submit-post">Отправить</button>
 			</form>
 			<div className="content__post content__block">
