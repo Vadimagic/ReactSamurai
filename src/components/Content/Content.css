@@ -21,6 +21,18 @@
 	align-items: flex-end;
 }
 
+.content__submit-post {
+	padding: 7px 5px;
+	background: rgb(134, 75, 202);
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.content__submit-post:hover {
+	background: rgb(145, 92, 206);
+}
+
 .content__post {
 
 }
