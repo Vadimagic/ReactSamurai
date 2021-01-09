@@ -10,7 +10,7 @@ const PostsList = ({posts = []}) => (
 			<button className={classes.submit_post}>Отправить</button>
 		</form>
 		{posts.map(post => {
-			return <Post post={post}/>
+			return <Post post={post} key={post.id}/>
 		})}
 	</div>
 )
