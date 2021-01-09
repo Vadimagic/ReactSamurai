@@ -1,3 +1,4 @@
+import Post from './Post/Post'
 import classes from './PostsList.module.css'
 
 const PostsList = () => (
@@ -8,6 +9,7 @@ const PostsList = () => (
 			</div>
 			<button className={classes.submit_post}>Отправить</button>
 		</form>
+		<Post />
 	</div>
 )
 

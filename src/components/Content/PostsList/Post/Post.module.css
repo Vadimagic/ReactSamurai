@@ -1,0 +1,26 @@
+.block {
+	background: #fff;
+	border-radius: 8px;
+	padding: 20px;
+	border: 1px solid rgba(0, 0, 0, 0.080);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.130);
+	margin-bottom: 20px;
+}
+
+.post_author {
+	position: relative;
+	overflow:hidden;
+	width:70px;
+	height:70px;
+}
+
+.post_avatar {
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	width:70px;
+	height:70px;
+	object-fit:cover;
+	border-radius: 50%;
+}
