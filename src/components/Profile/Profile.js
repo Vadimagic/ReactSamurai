@@ -1,4 +1,4 @@
-import classes from './Content.module.css'
+import classes from './Profile.module.css'
 import PostsList from './PostsList/PostsList'
 
 const Content = () => (
