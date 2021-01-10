@@ -11,7 +11,9 @@ function App() {
 			<Header />
 			<div className="wrapper">
 				<Navbar />
-				<Messenger />
+				<div className="wrapper__content">
+					<Profile />
+				</div>
 			</div>
 		</>
 	);

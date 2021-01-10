@@ -2,7 +2,7 @@ import classes from './Messenger.module.css'
 
 const Messenger = () => {
 	return (
-		<div>
+		<div className={classes.content}>
 			Dialogs
 		</div>
 	)
