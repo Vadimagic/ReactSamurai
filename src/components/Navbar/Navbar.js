@@ -4,16 +4,16 @@ const Navbar = () => (
 	<nav className={classes.navbar}>
 		<ul className={classes.list}>
 			<li className={classes.item}>
-				<a className={classes.link} href="/">Profile</a>
+				<a className={classes.link} href="/profile">Профиль</a>
 			</li>
 			<li className={classes.item}>
-				<a className={classes.link} href="/">Messages</a>
+				<a className={classes.link} href="/messenger">Сообщения</a>
 			</li>
 			<li className={classes.item}>
-				<a className={classes.link} href="/">News</a>
+				<a className={classes.link} href="/news">Новости</a>
 			</li>
 			<li className={classes.item}>
-				<a className={classes.link} href="/">Music</a>
+				<a className={classes.link} href="/music">Музыка</a>
 			</li>
 		</ul>
 	</nav>
