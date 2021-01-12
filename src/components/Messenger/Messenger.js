@@ -8,7 +8,7 @@ const Messenger = () => {
 					<img className={classes.dialog__photo} src="https://images-na.ssl-images-amazon.com/images/I/712dV%2BdZpdL._AC_SY679_.jpg" alt="Avatar"/>
 					<div className={classes.dialog__content}>
 						<div className={classes.dialog__name}>
-							Vadim
+							Вадим
 						</div>
 					</div>
 				</div>
@@ -16,7 +16,7 @@ const Messenger = () => {
 					<img className={classes.dialog__photo} src="https://avatanplus.com/files/photos/mid/59a2b4633c3f415e2390a3af.jpg" alt="Avatar"/>
 					<div className={classes.dialog__content}>
 						<div className={classes.dialog__name}>
-							Dima
+							Дима
 						</div>
 					</div>
 				</div>
@@ -24,7 +24,7 @@ const Messenger = () => {
 					<img className={classes.dialog__photo} src="https://img06.rl0.ru/afisha/e350x350p492x0f1080x1080q85i/s2.afisha.ru/mediastorage/3d/a7/c12ce10ae3e14a23a62b792aa73d.jpg" alt="Avatar"/>
 					<div className={classes.dialog__content}>
 						<div className={classes.dialog__name}>
-							Semen
+							Семён
 						</div>
 					</div>
 				</div>
@@ -34,7 +34,7 @@ const Messenger = () => {
 					<img className={classes.message__photo} src="https://avatanplus.com/files/photos/mid/59a2b4633c3f415e2390a3af.jpg" alt="Avatar"/>
 					<div className={classes.message__block}>
 						<div className={classes.message__author}>
-							Semen
+							Дима
 						</div>
 						<div className={classes.message__content}>
 							Привет
@@ -45,18 +45,7 @@ const Messenger = () => {
 					<img className={classes.message__photo} src="https://avatanplus.com/files/photos/mid/59a2b4633c3f415e2390a3af.jpg" alt="Avatar"/>
 					<div className={classes.message__block}>
 						<div className={classes.message__author}>
-							Semen
-						</div>
-						<div className={classes.message__content}>
-							Привет
-						</div>
-					</div>
-				</div>
-				<div className={classes.message}>
-					<img className={classes.message__photo} src="https://avatanplus.com/files/photos/mid/59a2b4633c3f415e2390a3af.jpg" alt="Avatar"/>
-					<div className={classes.message__block}>
-						<div className={classes.message__author}>
-							Semen
+							Дима
 						</div>
 						<div className={classes.message__content}>
 							Как дела?
@@ -67,7 +56,7 @@ const Messenger = () => {
 					<img className={classes.message__photo} src="https://images-na.ssl-images-amazon.com/images/I/712dV%2BdZpdL._AC_SY679_.jpg" alt="Avatar"/>
 					<div className={classes.message__block}>
 						<div className={classes.message__author}>
-							Vadim
+							Вадим
 						</div>
 						<div className={classes.message__content}>
 							Хорошо, <br/>А у тебя?
