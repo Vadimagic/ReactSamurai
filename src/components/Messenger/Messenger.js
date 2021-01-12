@@ -2,19 +2,28 @@ import classes from './Messenger.module.css'
 
 const Messenger = () => {
 	return (
-		<div className={classes.content}>
-			<div className={classes.list_dialogs}>
-				<div className={classes.item}>
-					Vadim
+		<div className={classes.block}>
+			<div className={classes.dialogs}>
+				<div className={classes.dialog}>
+					<img className={classes.dialog__photo} src="https://images-na.ssl-images-amazon.com/images/I/712dV%2BdZpdL._AC_SY679_.jpg" alt="Avatar"/>
+					<div className={classes.dialog__content}>
+						Vadim
+					</div>
 				</div>
-				<div className={classes.item}>
-					Dima
+				<div className={classes.dialog}>
+					<img className={classes.dialog__photo} src="https://avatanplus.com/files/photos/mid/59a2b4633c3f415e2390a3af.jpg" alt="Avatar"/>
+					<div className={classes.dialog__content}>
+						Dima
+					</div>
 				</div>
-				<div className={classes.item}>
-					Dima
+				<div className={classes.dialog}>
+					<img className={classes.dialog__photo} src="https://img06.rl0.ru/afisha/e350x350p492x0f1080x1080q85i/s2.afisha.ru/mediastorage/3d/a7/c12ce10ae3e14a23a62b792aa73d.jpg" alt="Avatar"/>
+					<div className={classes.dialog__content}>
+						Semen
+					</div>
 				</div>
 			</div>
-			<div clasaName={classes.messages}>
+			<div className={classes.messages}>
 				<div className={classes.message}>Привет</div>
 				<div className={classes.message}>Как дела?</div>
 				<div className={classes.message}>Что делаешь?</div>
