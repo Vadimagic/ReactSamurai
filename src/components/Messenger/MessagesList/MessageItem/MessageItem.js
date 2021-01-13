@@ -10,7 +10,7 @@ const MessageItem = ({message}) => {
 					{message.author}
 				</div>
 				<div className={classes.message__content}>
-					{message.text.split('<br/>').map((text, i) => {
+					{message.text.split(/<br\/*>/ig).map((text, i) => {
 						return <Fragment key={i}>{text}<br/></Fragment>
 					})}
 				</div>

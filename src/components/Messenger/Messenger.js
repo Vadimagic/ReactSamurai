@@ -1,4 +1,3 @@
-import { NavLink } from 'react-router-dom'
 import DialogsList from './DialogsList/DialogsList'
 import MessagesList from './MessagesList/MessagesList'
 import classes from './Messenger.module.css'
