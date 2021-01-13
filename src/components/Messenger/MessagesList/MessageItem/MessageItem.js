@@ -1,3 +1,4 @@
+import { Fragment } from 'react'
 import classes from './MessageItem.module.css'
 
 const MessageItem = ({message}) => {
@@ -9,7 +10,9 @@ const MessageItem = ({message}) => {
 					{message.author}
 				</div>
 				<div className={classes.message__content}>
-					{message.text}
+					{message.text.split('<br/>').map((text, i) => {
+						return <Fragment key={i}>{text}<br/></Fragment>
+					})}
 				</div>
 			</div>
 		</div>
