@@ -1,0 +1,24 @@
+.message {
+	display: flex;
+	padding: 10px 20px;
+}
+
+.message__photo {
+	width:30px;
+	height:30px;
+	object-fit:cover;
+	border-radius: 50%;
+	margin-right: 5px;
+}
+
+.message__block {
+
+}
+.message__author {
+	font-weight: 500;
+	font-size: 13px;
+}
+
+.message__content {
+
+}

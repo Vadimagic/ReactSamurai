@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom'
 import DialogsList from './DialogsList/DialogsList'
+import MessagesList from './MessagesList/MessagesList'
 import classes from './Messenger.module.css'
 
 const Messenger = () => {
@@ -36,7 +37,12 @@ const Messenger = () => {
 					</div>
 				</NavLink>
 			</div> */}
-			<div className={classes.messages}>
+			<MessagesList messages={[
+				{id: '142ds2wf', author: 'Дима', avatar: 'https://avatanplus.com/files/photos/mid/59a2b4633c3f415e2390a3af.jpg', text: 'Привет'},
+				{id: '234rwesd', author: 'Дима', avatar: 'https://avatanplus.com/files/photos/mid/59a2b4633c3f415e2390a3af.jpg', text: 'Как дела?'},
+				{id: 'sdvd2r32', author: 'Вадим', avatar: 'https://images-na.ssl-images-amazon.com/images/I/712dV%2BdZpdL._AC_SY679_.jpg', text: 'Хорошо, <br/>А у тебя?'},
+			]}/>
+			{/* <div className={classes.messages}>
 				<div className={classes.message}>
 					<img className={classes.message__photo} src="https://avatanplus.com/files/photos/mid/59a2b4633c3f415e2390a3af.jpg" alt="Avatar"/>
 					<div className={classes.message__block}>
@@ -70,7 +76,7 @@ const Messenger = () => {
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> */}
 		</div>
 	)
 }
