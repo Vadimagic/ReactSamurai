@@ -8,19 +8,19 @@
 }
 
 .post_author {
-	position: relative;
-	overflow:hidden;
-	width:70px;
-	height:70px;
+	display: flex;
+	align-items: center;
+}
+
+.post_link {
+	margin-left: 10px;
+	color: #2a5885;
+	font-weight: 500;
 }
 
 .post_avatar {
-	position: absolute;
-	top:50%;
-	left:50%;
-	transform:translate(-50%,-50%);
-	width:70px;
-	height:70px;
+	width:60px;
+	height:60px;
 	object-fit:cover;
 	border-radius: 50%;
 }
