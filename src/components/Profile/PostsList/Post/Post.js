@@ -1,13 +1,35 @@
+import { Fragment } from 'react'
 import { NavLink } from 'react-router-dom'
 import classes from './Post.module.css'
 
 const Post = ({post}) => (
 	<div className={classes.post + ' ' + classes.block}>
 		<div className={classes.post_author}>
-			<img className={classes.post_avatar} src="https://sun9-28.userapi.com/impf/c840629/v840629925/732ab/rYpcddjfw1w.jpg?size=901x887&quality=96&proxy=1&sign=7695574402391908780a4b0705b103e6&type=album" alt="Avatar"/>
+			<NavLink to={`/profile/${post.authorId}`}><img className={classes.post_avatar} src="https://images-na.ssl-images-amazon.com/images/I/712dV%2BdZpdL._AC_SY679_.jpg" alt="Avatar"/></NavLink>
 			<NavLink to={`/profile/${post.authorId}`} className={classes.post_link}>{post.author}</NavLink>
 		</div>
-		<div className={classes.post_info}>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi consequatur magnam obcaecati voluptates amet, vero facilis iure doloremque nulla perspiciatis!</div>
+		<div className={classes.post_content}>
+			{
+				post.content.text
+				? <div className={classes.post_text}>
+					{post.content.text.split(/<br\/*>/ig).map((text, i) => {
+						return <Fragment key={i}>{text}<br/></Fragment>
+					})}
+				</div>
+				: null
+			}
+			{
+				post.content.image
+				? <img className={classes.post_image} src={post.content.image} alt="imgPost"/>
+				: null
+			}
+			<div className={classes.social}>
+				<div className={classes.like}>
+					<div className={classes.icon_like}></div>
+					<span className={classes.icon_label}>{post.likesCount}</span>
+				</div>
+			</div>
+		</div>
 	</div>
 )
 
