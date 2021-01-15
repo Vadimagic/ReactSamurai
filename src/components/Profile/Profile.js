@@ -8,7 +8,20 @@ const Content = () => (
 		</div>
 		<div className={classes.info + ' ' + classes.block}>
 			<img className={classes.avatar} src="https://sun9-18.userapi.com/impg/c854520/v854520979/1986cf/cI-Et1pyGsw.jpg?size=353x383&quality=96&proxy=1&sign=7d9ca54044a285792c1999c220c24750&type=album" alt="Oden"/>
-			<div className={classes.description}></div>
+			<div className={classes.description}>
+				<h1 className={classes.name}>Вадим</h1>
+				<span className={classes.thought}>“Shoot for the moon. Even if you miss, you'll land among the stars.”</span>
+				<ul className={classes.social}>
+					<li className={classes.item + ' ' + classes.friends}>
+						<span className={classes.friends_count}>46</span>
+						<span className={classes.friends_text}>друзья</span>
+					</li>
+					<li className={classes.item + ' ' + classes.posts}>
+						<span className={classes.posts_count}>2</span>
+						<span className={classes.posts_text}>посты</span>
+					</li>
+				</ul>
+			</div>
 		</div>
 		<PostsList posts={[
 			{id: 'GS3sfe342S', author: 'Вадим', authorId: '21wddscfa', avatar: 'https://images-na.ssl-images-amazon.com/images/I/712dV%2BdZpdL._AC_SY679_.jpg', 
