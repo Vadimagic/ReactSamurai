@@ -5,12 +5,14 @@
 	height: 60px;
 	display: flex;
 	align-items: center;
+	position:relative;
 }
 
 .dialog__photo {
-	width:45px;
+	min-width:45px;
 	height:45px;
-	object-fit:cover;
+	object-fit: cover;
+	object-position: center;
 	border-radius: 50%;
 	margin-right: 5px;
 }
