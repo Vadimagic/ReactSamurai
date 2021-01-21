@@ -1,14 +1,15 @@
 import { Fragment } from 'react'
+import { NavLink } from 'react-router-dom'
 import classes from './MessageItem.module.css'
 
 const MessageItem = ({message}) => {
 	return (
 		<div className={classes.message}>
-			<img className={classes.message__photo} src={message.avatar} alt="Avatar"/>
+			<NavLink to={`/${message.authorId}`}><img className={classes.message__photo} src={message.avatar} alt="Avatar"/></NavLink>
 			<div className={classes.message__block}>
-				<div className={classes.message__author}>
+				<NavLink to={`/${message.authorId}`} className={classes.message__author}>
 					{message.author}
-				</div>
+				</NavLink>
 				<div className={classes.message__content}>
 					{message.text.split(/<br\/*>/ig).map((text, i) => {
 						return <Fragment key={i}>{text}<br/></Fragment>
