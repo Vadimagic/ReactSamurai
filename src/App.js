@@ -6,8 +6,8 @@ import Navbar from './components/Navbar/Navbar';
 import './App.css'
 import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
 
-function App({state}) {
-	const {profilePosts, messangerDialogs, exampleMessagesForDialog} = state
+function App({state : {profilePosts, messangerDialogs, exampleMessagesForDialog}}) {
+	// const {profilePosts, messangerDialogs, exampleMessagesForDialog} = state
 	return (
 		<BrowserRouter>
 			<Header />
