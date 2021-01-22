@@ -6,26 +6,3 @@
 	border-bottom: 1px solid rgba(0, 0, 0, 0.130);
 	margin-bottom: 20px;
 }
-
-.add_post {
-	display: flex;
-	justify-content: space-between;
-	align-items: flex-end;
-}
-
-.submit_post {
-	padding: 7px 5px;
-	background: rgb(134, 75, 202);
-	color: #fff;
-	border: none;
-	border-radius: 5px;
-	cursor: pointer;
-}
-
-.submit_post:hover {
-	background: rgb(145, 92, 206);
-}
-
-.add_text {
-	border: 2px solid rgb(194, 192, 192);
-}
