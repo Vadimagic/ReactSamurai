@@ -2,9 +2,10 @@ import {addPost} from '../../../../redux/state'
 import classes from './AddPost.module.css'
 
 const AddPost = () => {
+	
 	const submitPost = (e) => {
 		e.preventDefault()
-		addPost(e.target.children[0].outerText)
+		addPost(e.target.children[0].innerHTML)
 		e.target.children[0].innerHTML = ''
 	}
 
