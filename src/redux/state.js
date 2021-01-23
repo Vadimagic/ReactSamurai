@@ -24,15 +24,17 @@ const state = {
 }
 
 export const addPost = (postText = '', postImage = '') =>  {
-	const newPost = {
-		id: String(Date.now()), 
-		author: 'Вадим', 
-		authorId: 'vadimagic', 
-		avatar: 'https://images-na.ssl-images-amazon.com/images/I/712dV%2BdZpdL._AC_SY679_.jpg', 
-		content: {text: postText, image: postImage}, 
-		likesCount: 0
+	if (postText || postImage) {
+		const newPost = {
+			id: String(Date.now()), 
+			author: 'Вадим', 
+			authorId: 'vadimagic', 
+			avatar: 'https://images-na.ssl-images-amazon.com/images/I/712dV%2BdZpdL._AC_SY679_.jpg', 
+			content: {text: postText, image: postImage}, 
+			likesCount: 0
+		}
+		state.profilePosts.push(newPost)
 	}
-	state.profilePosts.push(newPost)
 }
 
 export default state
