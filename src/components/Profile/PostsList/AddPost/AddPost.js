@@ -5,13 +5,18 @@ const AddPost = () => {
 	
 	const submitPost = (e) => {
 		e.preventDefault()
-		addPost(e.target.children[0].innerHTML)
-		e.target.children[0].innerHTML = ''
+		addPost(e.target.children[0].innerText)
+		e.target.children[0].innerText = ''
 	}
 
 	return (
 		<form className={classes.add_post + ' ' + classes.block} onSubmit={(e) => submitPost(e)}>
-			<div className={classes.textarea} tabIndex="0" role="textbox" aria-multiline="true" contentEditable="PLAINTEXT-ONLY" data-role="editable" aria-label="Присоединиться к обсуждению..."></div>
+			<div 
+				className={classes.textarea} 
+				aria-multiline="true" 
+				contentEditable={true}
+				suppressContentEditableWarning={true}
+			></div>
 			<button className={classes.submit_post}>Отправить</button>
 		</form>
 	)
