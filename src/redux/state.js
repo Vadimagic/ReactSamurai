@@ -1,3 +1,7 @@
+let rerenderEntireTree = () => {
+
+}
+
 const profilePosts = [
 	{id: 'GS3sfe342S', author: 'Вадим', authorId: 'vadimagic', avatar: 'https://images-na.ssl-images-amazon.com/images/I/712dV%2BdZpdL._AC_SY679_.jpg', 
 	content: {text: 'Как прекрасно жить в этом мире, вы согласны?', image: 'https://wallscloud.net/uploads/cache/914086997/anime-art-devushka-spina-1024x576-MM-90.jpg'}, likesCount: 3},
@@ -38,7 +42,12 @@ export const addPost = (postText = '', postImage = '') =>  {
 			likesCount: 0
 		}
 		state.profilePosts.push(newPost)
+		rerenderEntireTree()
 	}
 }
 
 export default state
+
+export const subscribe = observer => {
+	rerenderEntireTree = observer
+}
