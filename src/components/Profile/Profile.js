@@ -1,10 +1,10 @@
 import PostsList from './PostsList/PostsList'
 import { ProfileInfo } from './ProfileInfo/ProfileInfo'
 
-const Content = ({posts}) => (
+const Content = ({profileState}) => (
 	<>
 		<ProfileInfo />
-		<PostsList posts={posts}/>
+		<PostsList posts={profileState.profilePosts}/>
 	</>
 )
 

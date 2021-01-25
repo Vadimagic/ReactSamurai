@@ -5,7 +5,7 @@ const profilePosts = [
 	content: {text: '', image: 'https://lh3.googleusercontent.com/7PtRH83w1K13OpR4JLotEhogmIvWHTggpsgHThN-LPzLfOPR9RnpQXLT86KEhS-kQ56NifE80vo6FekpScb4Co5HhFM=w640-h400-e365-rj-sc0x00ffffff'}, likesCount: 3}
 ]
 
-const messangerDialogs = [
+const messengerDialogs = [
 	{id: '34fetqsg', name: 'Вадим', avatar: 'https://images-na.ssl-images-amazon.com/images/I/712dV%2BdZpdL._AC_SY679_.jpg'},
 	{id: '6f4tfgvw', name: 'Дима', avatar: 'https://avatanplus.com/files/photos/mid/59a2b4633c3f415e2390a3af.jpg'},
 	{id: 'z773pds3', name: 'Семен', avatar: 'https://img06.rl0.ru/afisha/e350x350p492x0f1080x1080q85i/s2.afisha.ru/mediastorage/3d/a7/c12ce10ae3e14a23a62b792aa73d.jpg'},
@@ -18,9 +18,13 @@ const exampleMessagesForDialog = [
 ]
 
 const state = {
-	profilePosts,
-	messangerDialogs,
-	exampleMessagesForDialog
+	profilePage: {
+		profilePosts
+	},
+	messengerPage: {
+		messengerDialogs,
+		exampleMessagesForDialog
+	}
 }
 
 export const addPost = (postText = '', postImage = '') =>  {

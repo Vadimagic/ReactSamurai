@@ -6,7 +6,7 @@ import Navbar from './components/Navbar/Navbar';
 import './App.css'
 import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
 
-function App({state : {profilePosts, messangerDialogs, exampleMessagesForDialog}}) {
+function App({state : {profilePage, messengerPage}}) {
 	return (
 		<BrowserRouter>
 			<Header />
@@ -14,8 +14,8 @@ function App({state : {profilePosts, messangerDialogs, exampleMessagesForDialog}
 				<Navbar />
 				<div className="wrapper__content">
 					<Switch>
-						<Route path="/profile" render={() => <Profile posts={profilePosts}/>}/>
-						<Route path="/messenger" render={() => <Messenger dialogs={messangerDialogs} messages={exampleMessagesForDialog}/>}/>
+						<Route path="/profile" render={() => <Profile profileState={profilePage}/>}/>
+						<Route path="/messenger" render={() => <Messenger messengerState={messengerPage}/>}/>
 						<Redirect to="messenger"/>
 					</Switch>
 				</div>

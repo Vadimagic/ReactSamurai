@@ -2,11 +2,11 @@ import DialogsList from './DialogsList/DialogsList'
 import MessagesList from './MessagesList/MessagesList'
 import classes from './Messenger.module.css'
 
-const Messenger = ({dialogs, messages}) => {
+const Messenger = ({messengerState}) => {
 	return (
 		<div className={classes.block}>
-			<DialogsList dialogs={dialogs}/>
-			<MessagesList messages={messages}/>
+			<DialogsList dialogs={messengerState.messengerDialogs}/>
+			<MessagesList messages={messengerState.exampleMessagesForDialog}/>
 		</div>
 	)
 }
