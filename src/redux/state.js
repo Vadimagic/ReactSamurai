@@ -33,6 +33,7 @@ const state = {
 
 export const addPost = (postText = '', postImage = '') =>  {
 	if (postText || postImage) {
+		postText = postText.replace(/(\n){3,}/g, '\n\n').replace(/\n/g, '<br>') // replace \n -> <br> for display line br(break) & replace 3+ br line on 2 br
 		const newPost = {
 			id: String(Date.now()), 
 			author: 'Вадим', 
