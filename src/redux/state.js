@@ -41,8 +41,10 @@ export const addPost = (postText = '', postImage = '') =>  {
 			content: {text: postText, image: postImage}, 
 			likesCount: 0
 		}
-		state.profilePosts.push(newPost)
-		rerenderEntireTree()
+		console.log(state)
+		debugger
+		state.profilePage.profilePosts.push(newPost)
+		rerenderEntireTree(state)
 	}
 }
 
