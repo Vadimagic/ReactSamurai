@@ -1,27 +1,22 @@
-import { useState } from 'react'
+import { useRef } from 'react'
 import {addPost} from '../../../../redux/state'
 import classes from './AddPost.module.css'
 
 const AddPost = () => {
-	const [text, setText] = useState('')
+	const textRef = useRef(null)
 	
 	const submitPost = () => {
-		addPost(text)
-		setText('')
-	}
-
-	const updateText = (e) => {
-		setText(e.target.innerText)
+		addPost(textRef.current.innerText)
+		textRef.current.innerText = ''
 	}
 
 	return (
 		<div className={classes.add_post + ' ' + classes.block}>
 			<div 
 				className={classes.textarea} 
+				ref={textRef}
 				aria-multiline="true" 
 				contentEditable={true}
-				onInput={updateText}
-				onBlur={updateText}
 			></div>
 			<button 
 				className={classes.submit_post} 
