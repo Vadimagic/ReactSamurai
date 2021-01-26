@@ -6,6 +6,7 @@ const Content = ({profileState}) => {
 	useEffect(() => {
 		document.title = 'Профиль'
 	}, [])
+	
 	return (
 		<>
 			<ProfileInfo />
