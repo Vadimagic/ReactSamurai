@@ -25,7 +25,7 @@ const Post = ({post}) => (
 			}
 			<div className={classes.social}>
 				<div className={classes.like}>
-					<div className={classes.icon_like + ' ' + classes.icon_like_active}></div>
+					<div className={classes.icon_like + ' ' /* + classes.icon_like_active */}></div>
 					<span className={classes.icon_label}>{post.likesCount}</span>
 				</div>
 			</div>
