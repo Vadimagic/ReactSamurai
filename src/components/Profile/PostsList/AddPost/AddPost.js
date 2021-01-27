@@ -1,12 +1,11 @@
 import { useRef } from 'react'
-import store from '../../../../redux/state'
 import classes from './AddPost.module.css'
 
-const AddPost = () => {
+const AddPost = ({addPost}) => {
 	const textRef = useRef(null)
 	
 	const submitPost = () => {
-		store.addPost(textRef.current.innerText)
+		addPost(textRef.current.innerText)
 		textRef.current.innerText = ''
 	}
 

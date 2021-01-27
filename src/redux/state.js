@@ -21,12 +21,12 @@ const store = {
 			]
 		}
 	},
+	_callSubscriver() {},
 
 	get state() {
 		return this._state
 	},
-
-	rerenderEntireTree() {},
+	
 	subscribe(observer) {
 		this.rerenderEntireTree = observer
 	},

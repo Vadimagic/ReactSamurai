@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import PostsList from './PostsList/PostsList'
 import { ProfileInfo } from './ProfileInfo/ProfileInfo'
 
-const Content = ({profileState}) => {
+const Content = ({profileState, addPost}) => {
 	useEffect(() => {
 		document.title = 'Профиль'
 	}, [])
@@ -10,7 +10,7 @@ const Content = ({profileState}) => {
 	return (
 		<>
 			<ProfileInfo />
-			<PostsList posts={profileState.profilePosts}/>
+			<PostsList posts={profileState.profilePosts} addPost={addPost}/>
 		</>
 	)
 }
