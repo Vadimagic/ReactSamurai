@@ -6,7 +6,7 @@ import Navbar from './components/Navbar/Navbar';
 import './App.css'
 import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
 
-function App({state : {profilePage, messengerPage}, addPost}) {
+function App({state : {profilePage, messengerPage}, dispatch}) {
 	return (
 		<BrowserRouter>
 			<Header />
@@ -14,7 +14,7 @@ function App({state : {profilePage, messengerPage}, addPost}) {
 				<Navbar />
 				<div className="wrapper__content">
 					<Switch>
-						<Route path="/profile" render={() => <Profile profileState={profilePage} addPost={addPost}/>}/>
+						<Route path="/profile" render={() => <Profile profileState={profilePage} dispatch={dispatch}/>}/>
 						<Route path="/messenger" render={() => <Messenger messengerState={messengerPage}/>}/>
 						<Redirect to="messenger"/>
 					</Switch>

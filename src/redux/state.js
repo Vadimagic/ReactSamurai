@@ -31,7 +31,14 @@ const store = {
 		this.rerenderEntireTree = observer
 	},
 
-	addPost(postText = '', postImage = '') {
+	dispatch(action) {
+		switch(action.type) {
+			case 'ADD_POST': this._addPost(action.text); break;
+			default: console.log(`What is this type: ${action.type} ?!? (maybe you were wrong?)`)
+		}
+	},
+
+	_addPost(postText = '', postImage = '') {
 		if (postText || postImage) {
 			postText = postText.replace(/(\n){3,}/g, '\n\n').replace(/\n+$/, '').replace(/\n/g, '<br>') // replace \n -> <br> for display line br(break) & replace 3+ br line on 2 br
 			const newPost = {

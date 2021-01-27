@@ -1,11 +1,11 @@
 import { useRef } from 'react'
 import classes from './AddPost.module.css'
 
-const AddPost = ({addPost}) => {
+const AddPost = ({dispatch}) => {
 	const textRef = useRef(null)
 	
 	const submitPost = () => {
-		addPost(textRef.current.innerText)
+		dispatch({type:'ADD_POST', text: textRef.current.innerText})
 		textRef.current.innerText = ''
 	}
 
