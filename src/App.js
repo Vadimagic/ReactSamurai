@@ -15,7 +15,7 @@ function App({state : {profilePage, messengerPage}, dispatch}) {
 				<div className="wrapper__content">
 					<Switch>
 						<Route path="/profile" render={() => <Profile profileState={profilePage} dispatch={dispatch}/>}/>
-						<Route path="/messenger" render={() => <Messenger messengerState={messengerPage}/>}/>
+						<Route path="/messenger" render={() => <Messenger messengerState={messengerPage} dispatch={dispatch}/>}/>
 						<Redirect to="messenger"/>
 					</Switch>
 				</div>

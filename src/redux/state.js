@@ -1,4 +1,5 @@
 const ADD_POST = "ADD_POST"
+const ADD_MESSAGE = "ADD_MESSAGE"
 
 const store = {
 	_state: {
@@ -36,6 +37,7 @@ const store = {
 	dispatch(action) {
 		switch(action.type) {
 			case ADD_POST: this._addPost(action.text); break;
+			case ADD_MESSAGE: this._addMessage(action.text); break;
 			default: console.log(`What is this type: ${action.type} ?!? (maybe you were wrong?)`)
 		}
 	},
@@ -54,12 +56,34 @@ const store = {
 			this._state.profilePage.profilePosts.push(newPost)
 			this.rerenderEntireTree(this._state)
 		}
+	},
+
+	_addMessage(postText = '') {
+		if (postText) {
+			postText = postText.replace(/(\n){3,}/g, '\n\n').replace(/\n+$/, '').replace(/\n/g, '<br>') // replace \n -> <br> for display line br(break) & replace 3+ br line on 2 br
+			const newMessage = {
+				id: String(Date.now()), 
+				author: 'Вадим', 
+				authorId: 'vadimagic', 
+				avatar: 'https://images-na.ssl-images-amazon.com/images/I/712dV%2BdZpdL._AC_SY679_.jpg', 
+				text: postText
+			}
+			this._state.messengerPage.exampleMessagesForDialog.push(newMessage)
+			this.rerenderEntireTree(this._state)
+		}
 	}
 }
 
 export const addPostActionCreator = (text) => {
 	return {
 		type: ADD_POST,
+		text
+	}
+}
+
+export const addMessageActionCreator = (text) => {
+	return {
+		type: ADD_MESSAGE,
 		text
 	}
 }

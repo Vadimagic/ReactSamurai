@@ -1,22 +1,28 @@
-import { useState } from 'react'
+import { useRef } from 'react'
+import { addMessageActionCreator } from '../../../../redux/state'
 import classes from './AddMessage.module.css'
 
-const AddMessage = () => {
-	const [textMessage, setTextMessage] = useState('')
+const AddMessage = ({dispatch}) => {
+	const textRef = useRef(null)
 
-	const updateMessageText = (e) => {
-		setTextMessage(e.target.innerText)
-		console.log(textMessage)
+	const submitPost = () => {
+		dispatch(addMessageActionCreator(textRef.current.innerText))
+		textRef.current.innerText = ''
 	}
 
 	return (
-		<div 
-			className={classes.textarea} 
-			aria-multiline="true" 
-			contentEditable={true}
-			onInput={updateMessageText}
-			onBlur={updateMessageText}
-		></div>
+		<div>
+			<div 
+				className={classes.textarea} 
+				ref={textRef}
+				aria-multiline="true" 
+				contentEditable={true}
+			></div>
+			<button 
+				className={classes.submit_post} 
+				onClick={() => submitPost()}
+			>Отправить</button>
+		</div>
 	)
 }
 

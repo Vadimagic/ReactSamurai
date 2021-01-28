@@ -2,7 +2,7 @@ import AddMessage from './AddMessage/AddMessage'
 import MessageItem from './MessageItem/MessageItem'
 import classes from './MessagesList.module.css'
 
-const MessagesList = ({messages}) => {
+const MessagesList = ({messages, dispatch}) => {
 	return (
 		<div className={classes.messages}>
 			<div className={classes.list_messages}>
@@ -12,7 +12,7 @@ const MessagesList = ({messages}) => {
 					})
 				}
 			</div>
-			<AddMessage />
+			<AddMessage dispatch={dispatch}/>
 		</div>
 	)
 }
