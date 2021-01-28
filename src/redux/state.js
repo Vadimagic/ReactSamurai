@@ -1,3 +1,5 @@
+const ADD_POST = "ADD_POST"
+
 const store = {
 	_state: {
 		profilePage: {
@@ -33,7 +35,7 @@ const store = {
 
 	dispatch(action) {
 		switch(action.type) {
-			case 'ADD_POST': this._addPost(action.text); break;
+			case ADD_POST: this._addPost(action.text); break;
 			default: console.log(`What is this type: ${action.type} ?!? (maybe you were wrong?)`)
 		}
 	},
