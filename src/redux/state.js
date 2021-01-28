@@ -44,7 +44,7 @@ const store = {
 
 	_addPost(postText = '', postImage = '') {
 		if (postText.trim() || postImage) {
-			postText = postText.replace(/(\n){3,}/g, '\n\n').replace(/\n+$/, '').replace(/\n/g, '<br>') // replace \n -> <br> for display line br(break) & replace 3+ br line on 2 br
+			postText = postText.replace(/(\n){3,}/g, '\n\n').replace(/^\n+/, '').replace(/\n+$/, '').replace(/\n/g, '<br>') // replace \n -> <br> for display line br(break) & replace 3+ br line on 2 br
 			const newPost = {
 				id: String(Date.now()), 
 				author: 'Вадим', 
@@ -60,7 +60,7 @@ const store = {
 
 	_addMessage(postText = '') {
 		if (postText.trim()) {
-			postText = postText.replace(/(\n){3,}/g, '\n\n').replace(/\n+$/, '').replace(/\n/g, '<br>') // replace \n -> <br> for display line br(break) & replace 3+ br line on 2 br
+			postText = postText.replace(/(\n){3,}/g, '\n\n').replace(/(^\n+)|(\n+$)/g, '').replace(/\n/g, '<br>') // replace \n -> <br> for display line br(break) & replace 3+ br line on 2 br
 			const newMessage = {
 				id: String(Date.now()), 
 				author: 'Вадим', 
