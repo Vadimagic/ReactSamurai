@@ -1,4 +1,24 @@
+.add_message {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+.submit_message {
+	padding: 7px 5px;
+	background: rgb(134, 75, 202);
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.submit_message:hover {
+	background: rgb(145, 92, 206);
+}
+
 .textarea {
+	width: 100%;
 	display: block;
 	resize: none;
 	height: auto;

@@ -11,7 +11,7 @@ const AddMessage = ({dispatch}) => {
 	}
 
 	return (
-		<div>
+		<div className={classes.add_message}>
 			<div 
 				className={classes.textarea} 
 				ref={textRef}
@@ -19,7 +19,7 @@ const AddMessage = ({dispatch}) => {
 				contentEditable={true}
 			></div>
 			<button 
-				className={classes.submit_post} 
+				className={classes.submit_message} 
 				onClick={() => submitPost()}
 			>Отправить</button>
 		</div>

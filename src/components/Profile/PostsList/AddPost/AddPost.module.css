@@ -26,11 +26,6 @@
 	background: rgb(145, 92, 206);
 }
 
-.add_text {
-	max-width: 500px;
-	border: 2px solid rgb(194, 192, 192);
-}
-
 .textarea {
 	width: 100%;
 	display: block;
