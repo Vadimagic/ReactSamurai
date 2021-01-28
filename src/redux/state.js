@@ -57,4 +57,11 @@ const store = {
 	}
 }
 
+export const addPostActionCreator = (text) => {
+	return {
+		type: ADD_POST,
+		text
+	}
+}
+
 export default store

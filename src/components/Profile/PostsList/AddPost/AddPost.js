@@ -1,11 +1,12 @@
 import { useRef } from 'react'
+import { addPostActionCreator } from '../../../../redux/state'
 import classes from './AddPost.module.css'
 
 const AddPost = ({dispatch}) => {
 	const textRef = useRef(null)
 	
 	const submitPost = () => {
-		dispatch({type:'ADD_POST', text: textRef.current.innerText})
+		dispatch(addPostActionCreator(textRef.current.innerText))
 		textRef.current.innerText = ''
 	}
 
