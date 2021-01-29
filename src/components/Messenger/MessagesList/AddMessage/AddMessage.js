@@ -13,7 +13,7 @@ const AddMessage = ({dispatch}) => {
 		}
 	}
 
-	// const clickSubmit = (e) => {
+	// const clickSubmitPost = (e) => {
 	// }
 
 	return (
@@ -23,8 +23,9 @@ const AddMessage = ({dispatch}) => {
 				ref={textRef}
 				aria-multiline="true" 
 				contentEditable={true}
-				onKeyUp={submitPost}
+				onKeyPress={submitPost}
 			></div>
+			<button className={classes.submit_message}></button>
 		</div>
 	)
 }
