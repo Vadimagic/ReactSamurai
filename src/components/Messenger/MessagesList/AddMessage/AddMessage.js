@@ -13,8 +13,10 @@ const AddMessage = ({dispatch}) => {
 		}
 	}
 
-	// const clickSubmitPost = (e) => {
-	// }
+	const clickSubmitPost = () => {
+		dispatch(addMessageActionCreator(textRef.current.innerText))
+		textRef.current.innerText = ''
+	}
 
 	return (
 		<div className={classes.add_message}>
@@ -25,7 +27,10 @@ const AddMessage = ({dispatch}) => {
 				contentEditable={true}
 				onKeyPress={submitPost}
 			></div>
-			<button className={classes.submit_message}></button>
+			<button 
+				className={classes.submit_message}
+				onClick={clickSubmitPost}
+			></button>
 		</div>
 	)
 }
