@@ -5,10 +5,16 @@ import classes from './AddMessage.module.css'
 const AddMessage = ({dispatch}) => {
 	const textRef = useRef(null)
 
-	const submitPost = () => {
-		dispatch(addMessageActionCreator(textRef.current.innerText))
-		textRef.current.innerText = ''
+	const submitPost = (e) => {
+		if (e.key === 'Enter' && !e.shiftKey) {
+			e.preventDefault()
+			dispatch(addMessageActionCreator(textRef.current.innerText))
+			textRef.current.innerText = ''
+		}
 	}
+
+	// const clickSubmit = (e) => {
+	// }
 
 	return (
 		<div className={classes.add_message}>
@@ -17,11 +23,8 @@ const AddMessage = ({dispatch}) => {
 				ref={textRef}
 				aria-multiline="true" 
 				contentEditable={true}
+				onKeyUp={submitPost}
 			></div>
-			<button 
-				className={classes.submit_message} 
-				onClick={() => submitPost()}
-			>Отправить</button>
 		</div>
 	)
 }
