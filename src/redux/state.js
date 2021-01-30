@@ -1,5 +1,4 @@
-const ADD_POST = "ADD_POST"
-const ADD_MESSAGE = "ADD_MESSAGE"
+import { ADD_MESSAGE, ADD_POST } from "./actionTypes";
 
 const store = {
 	_state: {
