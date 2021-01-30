@@ -1,5 +1,6 @@
 import { profileReducer } from './reducers/profile'
 import { ADD_MESSAGE, ADD_POST } from "./actionTypes";
+import { messangerReducer } from './reducers/messenger';
 
 const store = {
 	_state: {
@@ -35,12 +36,14 @@ const store = {
 	},
 
 	dispatch(action) {
-		this.state.profilePage.profilePosts = profileReducer(this.state.profilePage.profilePosts, action)
+		this._state.profilePage.profilePosts = profileReducer(this.state.profilePage.profilePosts, action)
+		this._state.messengerPage.exampleMessagesForDialog = messangerReducer(this.state.messengerPage.exampleMessagesForDialog, action)
 		// switch(action.type) {
 		// 	case ADD_POST: this._addPost(action.text); break;
 		// 	case ADD_MESSAGE: this._addMessage(action.text); break;
 		// 	default: console.log(`What is this type: ${action.type} ?!? (maybe you were wrong?)`)
 		// }
+		this.rerenderEntireTree(this._state)
 	},
 
 	_addPost(postText = '', postImage = '') {
