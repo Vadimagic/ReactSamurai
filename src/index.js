@@ -3,9 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import store from './redux/store';
+import store from './redux/reduxStore';
 
 let rerenderEntireTree = (state) => {
+  debugger
 	ReactDOM.render(
 		<React.StrictMode>
 			<App state={state} dispatch={store.dispatch.bind(store)}/>
@@ -14,7 +15,7 @@ let rerenderEntireTree = (state) => {
 	);
 } 
 
-rerenderEntireTree(store.state)
+rerenderEntireTree(store.getState())
 
 store.subscribe(rerenderEntireTree)
 
