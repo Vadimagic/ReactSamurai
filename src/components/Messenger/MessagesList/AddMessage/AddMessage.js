@@ -1,5 +1,5 @@
 import { useRef } from 'react'
-import { addMessageActionCreator } from '../../../../redux/state'
+import { addMessageActionCreator } from '../../../../redux/store'
 import classes from './AddMessage.module.css'
 
 const AddMessage = ({dispatch}) => {

@@ -1,5 +1,5 @@
 import { useRef } from 'react'
-import { addPostActionCreator } from '../../../../redux/state'
+import { addPostActionCreator } from '../../../../redux/store'
 import classes from './AddPost.module.css'
 
 const AddPost = ({dispatch}) => {
