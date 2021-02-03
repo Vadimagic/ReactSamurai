@@ -1,6 +1,6 @@
 import { ADD_MESSAGE } from "../actionTypes"
 
-export const messangerReducer = (state, action) => {
+export const messengerReducer = (state, action) => {
 	switch (action.type) {
 		case ADD_MESSAGE: return [...state, {
 			id: String(Date.now()), 

@@ -1,6 +1,6 @@
 import { profileReducer } from './reducers/profile'
 import { ADD_MESSAGE, ADD_POST } from "./actionTypes";
-import { messangerReducer } from './reducers/messenger';
+import { messengerReducer } from './reducers/messenger';
 
 const store = {
 	_state: {
@@ -37,7 +37,7 @@ const store = {
 
 	dispatch(action) {
 		// this._state.profilePage.profilePosts = profileReducer(this.state.profilePage.profilePosts, action)
-		// this._state.messengerPage.exampleMessagesForDialog = messangerReducer(this.state.messengerPage.exampleMessagesForDialog, action)
+		// this._state.messengerPage.exampleMessagesForDialog = messengerReducer(this.state.messengerPage.exampleMessagesForDialog, action)
 		switch(action.type) {
 			case ADD_POST: this._addPost(action.text); break;
 			case ADD_MESSAGE: this._addMessage(action.text); break;
